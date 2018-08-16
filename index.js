@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const conFig = require('./config');
 const favicon = require('serve-favicon');
 const path = require('path');
 const cors = require('cors');
@@ -22,7 +21,7 @@ app.get('/', function(req, res){
 
 app.use('/contact', contactMe);
 
-app.listen(conFig.PORT, () => {
+app.listen(process.env.PORT, () => {
     console.log("working");
 });
 
